@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridge of Terabithia Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><img src="images/logo-trans.png"></a>
+        <div class="toggle"><img src="images/toggle.png"></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2>"It's like the <span>smarter</span> you are, the more things can <span>scare</span> you"</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto placeat quos fugit sed nemo?
+                Suscipit quas distinctio aut cum eos necessitatibus sed obcaecati molestias eum corporis blanditiis
+                eius, vitae aspernatur dolorem, voluptatum at ratione, iste nihil? Obcaecati sit facere ab quam
+                reiciendis explicabo! Vel quidem fugiat exercitationem ipsum. Veniam, fugiat?</p>
+            <a href="#" class="play" onclick="toggle();"><img src="images/play.png">Watch Trailer</a>
+            <div class="slide"></div>
+            <ul class="sci">
+                <li><a href="#"><img src="images/facebook.png"></a></li>
+                <li><a href="#"><img src="images/twitter.png"></a></li>
+                <li><a href="#"><img src="images/instagram.png"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="trailer">
+        <video src="video/Bridge To Terabithia (2007) Official Trailer.mp4" controls="true"></video>
+        <img src="images/close.png" class="close" onclick="toggle();">
+    </div>
+    <script type="text/javascript">
+        function toggle() {
+            var trailer = document.querySelector('.trailer');
+            var video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+</body>
+
+</html>
